@@ -3,8 +3,8 @@ package excer1;
 public class Car extends Vehicle {
 
     boolean enableAC;
-    public Car(String name, int fuelTank, int avgFuelCons, boolean enableAC) {
-        super(name, fuelTank, avgFuelCons);
+    public Car(String name, int fuelTank, int avgCons, boolean enableAC) {
+        super(name, fuelTank, avgCons);
         this.enableAC = enableAC;
     }
     public boolean isEnableAC() {
@@ -19,7 +19,7 @@ public class Car extends Vehicle {
     }
     double range() {
         if (enableAC) {
-            return super.range() - getFuelTank() / 0.8 + getavgCons();
+            return (getFuelTank() / (0.8 + getavgCons()))*100;
         } else {
             return super.range();
         }

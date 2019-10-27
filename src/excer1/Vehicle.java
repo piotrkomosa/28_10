@@ -40,6 +40,6 @@ public class Vehicle {
     }
     double range() {
         double range;
-        return range = fuelTank / avgCons * 100;
+        return range = fuelTank / avgCons*100;
     }
 }

@@ -4,10 +4,10 @@ public class Test {
     public static void main(String[] args) {
 
         Vehicle[] vehicles = new Vehicle[4];
-        vehicles[0]= new Car("Opel Astra", 56 , 7,false);
-        vehicles[1] = new Car("BMW M5", 80, 12,true);
-        vehicles[2] = new Truck("Scania", 280, 22,true, 8000);
-        vehicles[3] = new Truck("Mercedes", 300, 24,true, 7500);
+        vehicles[0]= new Car("Opel Astra", 56 , 7,true);
+        vehicles[1] = new Car("BMW M5", 80, 14,true);
+        vehicles[2] = new Truck("Scania", 280, 42,true, 2000);
+        vehicles[3] = new Truck("Mercedes", 320, 38,true, 300);
         printInfo(vehicles);
         System.out.println();
         System.out.println("zasięg wynosi odpowiednio: ");
@@ -20,6 +20,11 @@ public class Test {
         }
     }
     private static void getRange(Vehicle[] vehicles) {
+        for (int i = 0; i < vehicles.length; i++) {
+            System.out.printf("%.0f%n",vehicles[i].range());
+        }
+    }
+    private static void getRange2(Vehicle[] vehicles) {
         for (int i = 0; i < vehicles.length; i++) {
             System.out.printf("%.0f%n",vehicles[i].range());
         }
