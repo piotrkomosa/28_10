@@ -23,6 +23,7 @@ public class Truck  extends Car{
     }
     @Override
     double fuelConsumption() {
+
         if(enableAC)
         {
             return super.fuelConsumption() + 1.6;
@@ -30,6 +31,5 @@ public class Truck  extends Car{
         else{
             return super.fuelConsumption();
         }
-
     }
 }
