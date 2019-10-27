@@ -8,7 +8,6 @@ public class Car extends Vehicle {
         super(name, fuelTank, avgFuelCons);
         this.enableAC = enableAC;
     }
-
     public boolean isEnableAC() {
         return enableAC;
     }
@@ -22,10 +21,10 @@ public class Car extends Vehicle {
         return super.getinfo();
     }
 
-    double fuelConsumption() {
+    double range() {
         if(enableAC)
         {
-            return super.range() + 0.8;
+            return super.range()- getFuelTank()/0.8+getavgCons();
         }
         else{
             return super.range();

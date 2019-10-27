@@ -21,15 +21,13 @@ public class Truck  extends Car{
     String getinfo() {
         return super.getinfo();
     }
-    @Override
-    double fuelConsumption() {
-
+    double range() {
         if(enableAC)
         {
-            return super.fuelConsumption() + 1.6;
+            return super.range()- getFuelTank()/0.8*getavgCons() - getFuelTank()/(cargo/100*0.5*getavgCons());
         }
         else{
-            return super.fuelConsumption();
+            return super.range() - getFuelTank()/(cargo/100*0.5*getavgCons());
         }
     }
 }
