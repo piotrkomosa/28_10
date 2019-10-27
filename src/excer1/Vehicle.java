@@ -11,7 +11,6 @@ public class Vehicle {
         this.fuelTank = fuelTank;
         this.avgCons = avgFuelCons;
     }
-
     public String getName() {
         return name;
     }
@@ -39,9 +38,8 @@ public class Vehicle {
     String getinfo() {
         return name + "," + " pojemnosc zbiornika paliwa: " + fuelTank + " litórw" + " oraz średnie spalanie " + avgCons + " litrów/100km.";
     }
-
     double range() {
         double range;
-        return range = fuelTank / avgCons*100;
+        return range = fuelTank / avgCons * 100;
     }
 }
