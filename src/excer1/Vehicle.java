@@ -1,6 +1,7 @@
 package excer1;
 
 public class Vehicle {
+    public static int FUEL_INDEX=100;
 
     private String name;
     private double fuelTank;

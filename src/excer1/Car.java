@@ -1,6 +1,8 @@
 package excer1;
 
+
 public class Car extends Vehicle {
+
 
     boolean enableAC;
     public Car(String name, int fuelTank, int avgCons, boolean enableAC) {
@@ -17,9 +19,11 @@ public class Car extends Vehicle {
     String getinfo() {
         return super.getinfo();
     }
+    @Override
     double range() {
+        double acIndex1=0.8;
         if (enableAC) {
-            return (getFuelTank() / (0.8 + getavgCons()))*100;
+            return (getFuelTank() / (acIndex1 + getavgCons()))*FUEL_INDEX;
         } else {
             return super.range();
         }
